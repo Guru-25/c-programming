@@ -1,3 +1,4 @@
 *.exe
 .vscode/settings.json
 workspace.code-workspace
+temp.c
