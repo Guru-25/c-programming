@@ -1,5 +1,5 @@
 /*
-Progarm to print my name mm
+Progarm to print my name
 */
 
 #include <stdio.h>
