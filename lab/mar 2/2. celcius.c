@@ -10,7 +10,7 @@ int main()
     scanf("%f", &f);
     c = (f - 32) * 5 / 9;
 
-    printf("celcius is %.2f", c);
+    printf("celcius is %.2f\n", c);
 
     return 0;
 }

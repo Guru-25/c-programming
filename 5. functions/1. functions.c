@@ -1,3 +1,5 @@
+/* Write some functions */
+
 #include <stdio.h>
 
 int findGcd(int n1, int n2)

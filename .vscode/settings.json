@@ -1,7 +1,6 @@
 {
     "files.exclude": {
         ".vscode": true,
-        "**/*.exe": true,
-        "workspace.code-workspace": true
+        "**/*.exe": true
     }
 }

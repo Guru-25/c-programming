@@ -12,18 +12,18 @@ int main()
     scanf("%d", &minutes);
 
     if (hour > 0 && hour < 12)
-        printf("%d:%d am",hour, minutes);
+        printf("%d:%d am\n",hour, minutes);
     else if (hour > 12 && hour < 24)
     {
         time = hour - 12;
-        printf("%d:%d pm", time, minutes);
+        printf("%d:%d pm\n", time, minutes);
     }
     else if (hour == 0)
-        printf("12:%d am", minutes);
+        printf("12:%d am\n", minutes);
     else if (hour == 12)
-        printf("12:%d pm", minutes);
+        printf("12:%d pm\n", minutes);
     else
-        printf("please enter valid hour");
+        printf("please enter valid hour\n");
 
     return 0;
 }

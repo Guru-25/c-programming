@@ -11,7 +11,7 @@ int main()
 
     last_digit = num % 10;
 
-    printf("last digit is %d", last_digit);
+    printf("last digit is %d\n", last_digit);
 
     return 0;
 }
