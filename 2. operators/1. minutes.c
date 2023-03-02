@@ -1,3 +1,5 @@
+/* Convert minutes to years and days */
+
 #include <stdio.h>
 
 int main()

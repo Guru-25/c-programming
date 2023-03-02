@@ -1,3 +1,5 @@
+/* Create and use an enum type */
+
 #include <stdio.h>
 
 int main()

@@ -1,6 +1,5 @@
-/*
-Progarm to print my name
-*/
+/* Starting to write code */
+/* Writing a C program that displays your name */
 
 #include <stdio.h>
 

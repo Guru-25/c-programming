@@ -1,3 +1,5 @@
+/*  Print the byte size of the basic data types */
+
 #include<stdio.h>
 
 int main()

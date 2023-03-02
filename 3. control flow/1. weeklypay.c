@@ -1,3 +1,5 @@
+/* Determine amount of Pay */
+
 #include <stdio.h>
 #define PAYRATE 12.0
 #define PAYRATE_300 .15 // 15.0 / 100.0

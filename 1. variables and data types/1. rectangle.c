@@ -1,3 +1,5 @@
+/* Print the Area of a Rectangle */
+
 #include <stdio.h>
 
 int main(int argc, char *argv[])
