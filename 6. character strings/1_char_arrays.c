@@ -1,3 +1,5 @@
+/* Understanding char arrays */
+
 #include <stdio.h>
 #include <stdbool.h>
 
