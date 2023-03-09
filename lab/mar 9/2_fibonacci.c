@@ -7,8 +7,7 @@ int main()
     int n, x = 0, y = 1, z, sum = 0;
     printf("enter number of series should be generated: ");
     scanf("%d", &n);
-    printf("%d ", x);
-    printf("%d ", y);
+    printf("%d %d ", x, y);
     
     int i;
     for (i = 2 ; i < n ; i++)
