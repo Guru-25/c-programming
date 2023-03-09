@@ -1,3 +1,5 @@
+/* Print all the two digit pair that are producing the sum "150". Example pairs: (60, 90), (61,89)... */
+
 #include <stdio.h>
 
 int main()

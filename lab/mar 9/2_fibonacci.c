@@ -1,3 +1,5 @@
+/* Print the Fibonacci series up to the limit and display the sum of all the numbers */
+
 #include <stdio.h>
 
 int main()

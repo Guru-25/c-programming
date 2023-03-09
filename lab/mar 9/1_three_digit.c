@@ -1,3 +1,5 @@
+/* Print 10 three digit numbers that are starts and ends with same number. Get numbers from the user input */
+
 #include <stdio.h>
 
 int main()

@@ -1,3 +1,5 @@
+/* Find the sum of any 10 even numbers that are divisible by 3. Get user input and use break or/and continue. */
+
 #include <stdio.h>
 
 int main()
@@ -19,8 +21,7 @@ int main()
             count++;
             continue;
         }
-        else
-            n++;
+        n++;
     }
     printf("\ntheir sum is %d", sum);
 
