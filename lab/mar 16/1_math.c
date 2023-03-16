@@ -44,7 +44,7 @@ void exponential()
 int main()
 {
     int user;
-    printf("1 - Power\n2 - Square Root\n3 - Ceil and Floor\n4 - Log\n5 - Exponential\nEnter a number to do operation: ");
+    printf("1 - Power\n2 - Square Root\n3 - Ceil and Floor\n4 - Log\n5 - Exponential\nEnter an option: ");
     scanf("%d", &user);
     switch (user)
     {
@@ -64,7 +64,7 @@ int main()
             exponential();
             break;
         default:
-            printf("not a valid number");
+            printf("not a valid option");
             break;
     }
     return 0;
