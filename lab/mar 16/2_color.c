@@ -6,11 +6,11 @@ int main()
 {
     char color;
     int violet = 0, indigo = 0, blue = 0, green = 0, yellow = 0, orange = 0, red = 0;
-    int i = 0;
+    int i;
 
     for (i = 1; i <= 15; i++)
     {
-        printf("enter a color for vegetable %d: ", i);
+        printf("enter a color code for vegetable %d: ", i);
         scanf(" %c", &color);
 
         switch (color)
@@ -44,12 +44,12 @@ int main()
                 red++;
                 break;
             default:
-                printf("not a valid color\n");
+                printf("not a valid color code\n");
                 i--;
         }
     }
 
-    printf("\nTotal count of vegetables by color:\n");
+    printf("\nTotal count of vegetables by color: %d\n", i-1);
     printf("Violet: %d\n", violet);
     printf("Indigo: %d\n", indigo);
     printf("Blue: %d\n", blue);
