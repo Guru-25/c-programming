@@ -29,5 +29,6 @@ int main()
         printf("The numbers arranged in ascending order are given below \n");
         for (i = 0; i < n; i++)
             printf("%d\n", arr[i]);
+        return 0;
  
     }

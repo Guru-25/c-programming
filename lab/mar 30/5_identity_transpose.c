@@ -6,16 +6,16 @@
 
 int main()
 {
-    int choice, i, j, rows, cols, isIdentity = 1;
+    int choice, i, j, row, col, isIdentity = 1;
 
-    printf("Enter the number of rows and columns of the matrix: ");
-    scanf("%d %d", &rows, &cols);
+    printf("Enter the number of row and columns of the matrix: ");
+    scanf("%d %d", &row, &col);
 
-    int matrix[rows][cols];
+    int matrix[row][col];
 
     printf("Enter the elements of the matrix: \n");
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < cols; j++) {
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
             scanf("%d", &matrix[i][j]);
         }
     }
@@ -29,9 +29,9 @@ int main()
     switch (choice)
     {
         case 1:
-            for (i = 0; i < rows; i++)
+            for (i = 0; i < row; i++)
             {
-                for (j = 0; j < cols; j++)
+                for (j = 0; j < col; j++)
                 {
                     if ((i == j && matrix[i][j] != 1) || (i != j && matrix[i][j] != 0))
                     {
@@ -49,9 +49,9 @@ int main()
             break;
         case 2:
             printf("The transpose of the matrix is: \n");
-            for (i = 0; i < cols; i++)
+            for (i = 0; i < col; i++)
             {
-                for (j = 0; j < rows; j++)
+                for (j = 0; j < row; j++)
                     printf("%d ", matrix[j][i]);
                 printf("\n");
             }
