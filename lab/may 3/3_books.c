@@ -39,7 +39,6 @@ void costliest(int n) {
     char highBook[20];
     for (i = 0; i < n; i++) {
         if (book_no[i].cost > high) {
-            high = book_no[i].cost;
             strcpy(highBook, book_no[i].book_name);
         }
     }
