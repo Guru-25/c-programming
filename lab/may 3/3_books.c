@@ -3,10 +3,12 @@
 #include <stdio.h>
 #include <string.h>
 
+// creating nested structure
 struct dop {
     int date, month, year;
 };
 
+// creating structure
 struct books {
     int book_id, cost, quantity;
     char book_name[20], author_name[20], pub_name[20];
@@ -14,6 +16,7 @@ struct books {
 } book_no[100];
 
 void book_details(int n) {
+    // getting book details
     int i = 0;
     for (i = 0; i < n; i++) {
         printf("Enter Book ID of Book no. %d: ", i + 1);
@@ -34,6 +37,7 @@ void book_details(int n) {
     }
 }
 
+// finding high cost book
 void costliest(int n) {
     int i, high = book_no[0].cost;
     char highBook[20];
@@ -45,6 +49,7 @@ void costliest(int n) {
     printf("Costliest book is %s", highBook);
 }
 
+// book name search
 void title_search(int n) {
     int flag = 0, i;
     char title_search_var[20];
@@ -60,6 +65,7 @@ void title_search(int n) {
         printf("%s is not available", title_search_var);
 }
 
+// author name search
 void author_search(int n) {
     int i, flag = 0;
     char author_search_var[20];
@@ -76,6 +82,7 @@ void author_search(int n) {
         printf("No book is availabe from the given author");
 }
 
+// publication name search
 void pub_search(int n) {
     int i, flag = 0;
     char pub_search_var[20];
@@ -92,6 +99,7 @@ void pub_search(int n) {
         printf("No book is availabe from the given publication");
 }
 
+// year search
 void year_search(int n) {
     int i, flag = 0, year_search_var;
     printf("Enter the year to search for: ");
@@ -106,6 +114,7 @@ void year_search(int n) {
         printf("No book is availabe from the given year");
 }
 
+// main function
 void main() {
     int num;
     printf("Enter the number of books (max is 100): ");
