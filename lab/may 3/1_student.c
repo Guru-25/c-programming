@@ -12,12 +12,12 @@
 // creating struct
 struct student {
     char name[20];
-    float mark[5], total;
+    float mark[2], total;
 };
 
 void main() {
     // getting students details
-    int n = 5, sub = 5, i, j;
+    int n = 2, sub = 2, i, j;
     struct student student_no[n];
     for (i = 0; i < n; i++) {
         printf("Enter Name of Student %d: ", i + 1);
@@ -55,7 +55,28 @@ void main() {
     if (flag == 0)
         printf("%s is not in name list\n\n", search);
 
-    // Sort Code here
+    // Sort names
+    struct student student_sort[n];
+    memcpy(student_sort, student_no, sizeof(student_no)); // copying student_no struct to another struct
+    struct student temp;
+
+    printf("After sorting student details by name:\n");
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (strcmp(student_sort[j].name, student_sort[j + 1].name) > 0) {
+                temp = student_sort[j];
+                student_sort[j] = student_sort[j + 1];
+                student_sort[j + 1] = temp;
+            }
+        }
+    }
+    for (i = 0; i < n; i++) {
+        printf("Name of Student %d: %s\n", i + 1, student_sort[i].name);
+        for (j = 0; j < sub; j++) {
+            printf("Subject %d Mark of Student %d: %.2f\n", j + 1, i + 1, student_sort[i].mark[j]);
+        }
+        printf("Total marks of Student %d: %.2f\n\n", i + 1, student_sort[i].total);
+    }    
 
     // Top Scorer
     float top = student_no[0].total;
