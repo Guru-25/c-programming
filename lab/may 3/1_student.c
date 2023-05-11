@@ -12,12 +12,12 @@
 // creating struct
 struct student {
     char name[20];
-    float mark[2], total;
+    float mark[5], total;
 };
 
 void main() {
     // getting students details
-    int n = 2, sub = 2, i, j;
+    int n = 5, sub = 5, i, j;
     struct student student_no[n];
     for (i = 0; i < n; i++) {
         printf("Enter Name of Student %d: ", i + 1);
