@@ -18,27 +18,27 @@ struct student {
 void main() {
     // getting students details
     int n = 5, sub = 5, i, j;
-    struct student student_no[n];
+    struct student st[n];
     for (i = 0; i < n; i++) {
         printf("Enter Name of Student %d: ", i + 1);
-        scanf("%s", student_no[i].name);
+        scanf("%s", st[i].name);
         // calculating total of each student
-        student_no[i].total = 0;
+        st[i].total = 0;
         for (j = 0; j < sub; j++) {
             printf("Enter Subject %d Mark of Student %d: ", j + 1, i + 1);
-            scanf("%f", &student_no[i].mark[j]);
-            student_no[i].total += student_no[i].mark[j];
+            scanf("%f", &st[i].mark[j]);
+            st[i].total += st[i].mark[j];
         }
         printf("\n");
     }
     
     // printing students details
     for (i = 0; i < n; i++) {
-        printf("Name of Student %d: %s\n", i + 1, student_no[i].name);
+        printf("Name of Student %d: %s\n", i + 1, st[i].name);
         for (j = 0; j < sub; j++) {
-            printf("Subject %d Mark of Student %d: %.2f\n", j + 1, i + 1, student_no[i].mark[j]);
+            printf("Subject %d Mark of Student %d: %.2f\n", j + 1, i + 1, st[i].mark[j]);
         }
-        printf("Total marks of Student %d: %.2f\n\n", i + 1, student_no[i].total);
+        printf("Total marks of Student %d: %.2f\n\n", i + 1, st[i].total);
     }
 
     // searching student
@@ -47,7 +47,7 @@ void main() {
     printf("Enter a Name to search for: ");
     scanf("%s", search);
     for (i = 0; i < n; i++) {
-        if (strcmp(student_no[i].name, search) == 0) {
+        if (strcmp(st[i].name, search) == 0) {
             printf("%s is in name list\n\n", search);
             flag = 1;
         }
@@ -56,35 +56,36 @@ void main() {
         printf("%s is not in name list\n\n", search);
 
     // Sort names
-    struct student student_sort[n];
-    memcpy(student_sort, student_no, sizeof(student_no)); // copying student_no struct to another struct
+    struct student st_sort[n];
+    memcpy(st_sort, st, sizeof(st)); // copying st struct to another struct
     struct student temp;
 
     printf("After sorting student details by name:\n");
     for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - i - 1; j++) {
-            if (strcmp(student_sort[j].name, student_sort[j + 1].name) > 0) {
-                temp = student_sort[j];
-                student_sort[j] = student_sort[j + 1];
-                student_sort[j + 1] = temp;
+            if (strcmp(st_sort[j].name, st_sort[j + 1].name) > 0) {
+                temp = st_sort[j];
+                st_sort[j] = st_sort[j + 1];
+                st_sort[j + 1] = temp;
             }
         }
     }
     for (i = 0; i < n; i++) {
-        printf("Name of Student %d: %s\n", i + 1, student_sort[i].name);
+
+        printf("%d.\nName of Student: %s\n", i + 1, st_sort[i].name);
         for (j = 0; j < sub; j++) {
-            printf("Subject %d Mark of Student %d: %.2f\n", j + 1, i + 1, student_sort[i].mark[j]);
+            printf("Subject %d Mark: %.2f\n", j + 1, st_sort[i].mark[j]);
         }
-        printf("Total marks of Student %d: %.2f\n\n", i + 1, student_sort[i].total);
+        printf("Total marks: %.2f\n\n", st_sort[i].total);
     }    
 
     // Top Scorer
-    float top = student_no[0].total;
+    float top = st[0].total;
     char topName[20];
     for (i = 0; i < n; i++) {
-        if (student_no[i].total > top) {
-            top = student_no[i].total;
-            strcpy(topName, student_no[i].name);
+        if (st[i].total > top) {
+            top = st[i].total;
+            strcpy(topName, st[i].name);
         }
     }
     printf("Top Scorer is Student %s whose Total is %.2f\n\n", topName, top);
@@ -92,7 +93,7 @@ void main() {
     // Class Average
     float classTotal = 0;
     for (i = 0; i < n; i++) {
-        classTotal += student_no[i].total;
+        classTotal += st[i].total;
     }
     printf("Class Average is %.2f", classTotal / n);
 }
