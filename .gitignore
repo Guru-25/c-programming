@@ -1,6 +1,2 @@
-*
-!*/
-!*.c
-!.vscode/settings.json
-!.gitignore
+**/bin
 test.c
