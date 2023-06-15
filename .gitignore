@@ -1,5 +1,7 @@
 *
 !*/
 !*.c
+!*.txt
 !.vscode/settings.json
 !.gitignore
+test.c
