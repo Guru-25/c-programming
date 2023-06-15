@@ -14,7 +14,7 @@ int main()
             if (d==1)
             {
                 printf("Enter the number of rows: ");
-                scanf("%d", &r);
+                scanf("%d", &r);    
                 printf("Enter the number of columns : ");
                 scanf("%d", &k);
                 printf("Enter the numbers of matrix A.\n");
