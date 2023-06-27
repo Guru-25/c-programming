@@ -33,6 +33,7 @@ int fun2() {
     }
     printf("\n");
   }
+  return 0;
 }
 
 int fun3() {
@@ -50,6 +51,7 @@ int fun3() {
     }
     printf("\n");
   }
+  return 0;
 }
 
 int fun4() {
@@ -95,15 +97,15 @@ int fun5() {
 
 int fun6() {
   /*
-   *
-   * *
-   * * *
-   * * * *
-   * * * * *
-   * * * *
-   * * *
-   * *
-   *
+        * 
+       * * 
+      * * * 
+     * * * * 
+    * * * * * 
+     * * * * 
+      * * * 
+       * * 
+        *
    */
   int row, col, n = 5;
   for (row = 1; row <= (2 * n) - 1; row++) {
